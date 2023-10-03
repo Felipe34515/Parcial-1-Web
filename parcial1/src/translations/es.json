@@ -1,0 +1,15 @@
+{
+  "SigIn": "Iniciar sesión",
+  "YourCountUniAlpes": "Tu cuenta UniAlpes",
+  "EmmailInvalid": "Tu correo electrónico no es válido",
+  "messageEmail": "Nunca compartiremos tu correo electrónico con nadie más.",
+  "messagegPasword": "Tu contraseña debe contener números y letras y debe tener al menos 6 caracteres de longitud",
+  "ListCars": "Lista de autos",
+  "carMaker": "Tu cuenta UniAlpes",
+  "Car Maker": "Fabricante de autos",
+  "CarModel": "Modelo de auto",
+  "CarYear": "Año del auto",
+  "PartName": "Nombre de la pieza",
+  "Description": "Descripción",
+  "CarNotFound": "Auto no encontrado"
+}

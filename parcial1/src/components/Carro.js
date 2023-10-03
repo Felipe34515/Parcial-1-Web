@@ -1,8 +1,11 @@
 
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
+import LanguageSelector from "./LanguageSelector";
+import { useTranslation, i18n } from 'react-i18next';
 
 function Carro(props) {
+  const [t, i18n] = useTranslation("es");
 
   return (
     <Card style={{ width: '18rem', height: '24rem' }} className="mb-3">
