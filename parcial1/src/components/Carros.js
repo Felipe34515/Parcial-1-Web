@@ -1,41 +1,34 @@
-import { useLocation } from "react-router-dom";
-import { useState, useEffect } from "react";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
+import '../App.css';
 import Carro from "./Carro";
-import CarroDetail from "./CarroDetail";
 
-function Carros(props){
-    const location = useLocation();
-    const [carros, setCarro] = useState([]);
+const { useEffect, useState } = require("react");
 
-    const renderrating = () => {
-        console.log("entrando funcion")
-        if ( props.usuario !== undefined) return (console.log(props.usuario), "Role: " +props.usuario.role);
-        else return ("hola");
-      };
-
-      useEffect(() => {
-        // const URL ="https://my.api.mockaroo.com/books.json?key=57ab8190";
-        const URL ="https://isis3710.slack.com/files/U04G1K8C3U3/F05U55ZLV70/datos.json";
+function Carros() {
+    const [carros, setCarros] = useState([]);
+    useEffect(() => {
+        const URL ="https://raw.githubusercontent.com/Felipe34515/Parcial-1-Web/main/datos.json";
         fetch(URL).then(data => data.json()).then(data =>{
-            setCarro(data);
+            setCarros(data);
         }); 
     }, []);
 
-    return(
-        <div className="container">
-        <Row>
-            <h1>Carros</h1>
-            <h1>{renderrating()}</h1>
-            <h2>datos</h2>
-        </Row>
-
+    return (
+        <div>
+            <h1>List of cars</h1>
+            <hr></hr>
+            <center>
+                <div className='containerFilter' style={{ width: "1000px", display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
+                    {carros.map(carro =>
+                        <div className="columna" key={carro.carModel} style={{ margin: "20px", width: "calc(33.33% - 40px)", border: "1px solid black" }}>
+                            <Carro carro={carro} />
+                        </div>
+                    )}
+                </div>
+            </center>
         </div>
-                
     )
-
-   
 }
 
 export default Carros;
+
+

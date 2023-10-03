@@ -6,18 +6,19 @@ import Carros from './components/Carros';
 import CarroDetail from './components/CarroDetail';
 import { useState } from 'react';
 
+
 function App() {
   const [datos, setDatos] = useState();
   const [usuario, setUsuario] = useState("{}");
   return (
-    <div className='App' style={{backgroundColor:'grey', width:'100%', height:'100%', minHeight:'100vh', margin:'auto'}}>
+    <div className='App'>
       <BrowserRouter>
-      <h1>hola</h1>
         <Routes> 
-          <Route path="/" element={<Login usuario={usuario} setUsuario={setUsuario} />} />
-          <Route path="/Carros" element={<Carros datos={datos} setDatos={setDatos} usuario={usuario} setUsuario={setUsuario} />} />
-          <Route path="/Carros/:CarroId" element={<CarroDetail datos={datos} setDatos={setDatos} usuario={usuario} setUsuario={setUsuario} />} /> 
-          <Route path="*" element={<Navigate to="/" />} /> 
+        <Route path='/' element={<Login/>}></Route>
+          <Route path='/parts' element={<Carros/>}></Route>
+          <Route path='/part' element={<CarroDetail/>}></Route>
+          <Route path='/part/:carrosid' element={<CarroDetail/>}></Route>
+
         </Routes>
       </BrowserRouter>
 

@@ -36,3 +36,42 @@
     transform: rotate(360deg);
   }
 }
+
+.carros-container {
+  background-color: rgb(255, 255, 255); /* Fondo gris para el contenedor principal */
+  padding: 20px; /* Espaciado interior */
+  width: 100%; /* Ancho completo */
+  text-align: center; /* Centra el contenido de texto */
+}
+
+.centered-title {
+  margin-top: 0; /* Elimina el margen superior del título */
+}
+
+.carro-item {
+  border: 1px solid rgb(0, 0, 0); /* Borde gris para cada elemento */
+  margin: 10px; /* Espaciado entre elementos */
+  padding: 10px; /* Espaciado interior */
+  text-align: left; /* Centra el contenido de texto */
+  
+
+}
+
+.containerFilter {
+  display: flex;
+
+}
+
+.columna {
+  flex: 1;
+  
+}
+
+.border{
+  border: #61dafb;
+  border-radius: 1px;
+}
+
+h4 {
+  text-align: left;
+}
